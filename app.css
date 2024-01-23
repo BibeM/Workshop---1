@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  place-items: center;
+}
+header {
+  margin-top: 20px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  place-items: center;
+}
+.starWarsLogo {
+  width: 750px;
+  height: 300px;
+  border: 5px solid yellow;
+  border-radius: 8px;
+}
+.starWarsSpaceship {
+  width: 550px;
+}
+.starWarsCaracter {
+  width: 840px;
+}
