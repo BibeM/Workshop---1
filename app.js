@@ -4,6 +4,12 @@ const starWarsCaracterEl = document.querySelector(".starWarsCaracter");
 const starWarsSpaceshipEl = document.querySelector(".starWarsSpaceship");
 const peopleTableEl = document.querySelector(".caracter-container");
 const spaceshipTableEl = document.querySelector(".spaceship-container");
+console.log(
+  starWarsCaracterEl,
+  starWarsSpaceshipEl,
+  peopleTableEl,
+  spaceshipTableEl
+);
 
 const STARWARSAPI_PEOPLE = "https://swapi.dev/api/people/?page=1";
 function fetchStarWarsPeople() {
@@ -13,11 +19,10 @@ function fetchStarWarsPeople() {
     })
     .then(function (data) {
       console.log(data);
-      renderCaracterTable(spaceshipTableEl, data);
+      renderCaracterTable(peopleTableEl, data);
     });
 }
 fetchStarWarsPeople();
-console.log(fetchStarWarsPeople);
 
 const STARWARSAPI_SRACESHIP = "https://swapi.dev/api/starships/?page=1";
 function fetchStarWarsSpaceship() {
@@ -30,7 +35,6 @@ function fetchStarWarsSpaceship() {
     });
 }
 fetchStarWarsSpaceship();
-console.log(fetchStarWarsSpaceship);
 
 function renderCaracterTable(peopleContainerTable, people) {
   peopleContainerTable = "";
